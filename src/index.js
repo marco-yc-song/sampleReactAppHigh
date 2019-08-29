@@ -1,17 +1,15 @@
-const numbers = [1, 2, 3, 5, 8, 13, 21, 34, 55];
-
-
-function overFifteen(iParam) {
-    return  iParam > 15 ? true : false; 
-}
-
-
-const biggerThan15 = numbers.filter( overFifteen );
-
-// console.log(biggerThan15);
-
 
 let posts = ['Hi', 'Hello', 'Bye'];
 
-posts = posts.filter( (item, index) => index > 0 );
+// posts.forEach( post => console.log(post) );
+
+// posts.push("new");
+
+//includes로 원소 존재 확인
+if(posts.includes('Bye')){
+
+    posts.push('hahaha');
+
+}
 console.log(posts);
+
