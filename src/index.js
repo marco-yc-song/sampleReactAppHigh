@@ -1,21 +1,31 @@
-const days = ['Mon', 'Tue', 'Wed' ];
-const otherDays = ['Thu', 'Fri','Sat'];
 
-//spread 연산자를 이용하면 배열 분해 가능
-const allDays =[ ...days ,...otherDays];
+//기본적인 클래스 생성 및 상속하기
+class Human {
 
-console.log(allDays);
 
-const ob = {
+    constructor(name, lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
 
-    first:'Hi',
-    second:'Hello'
 }
 
-const ab = {
-    third:'bye'
+class Baby extends Human{
+
+    cry(){
+        console.log('wassssss');
+    }
+
+    sayName(){
+        console.log(`I'm ${this.name} ${this.lastName}`);
+
+    }
+
 }
 
-//spread 연산자를 통한 객체 아이템 접근
-const two = {...ob,...ab};
-console.log(two);
+const nico = new Human('Nucj', "thos");
+
+const myBaby = new Baby('jus', 'das');
+
+// console.log(nico);
+console.log(myBaby.cry(), myBaby.sayName() );
