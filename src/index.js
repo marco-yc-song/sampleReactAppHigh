@@ -1,12 +1,17 @@
+const numbers = [1, 2, 3, 5, 8, 13, 21, 34, 55];
 
-const days = ['mon', 'tue', 'wed', 'thurs', 'fri'];
 
-const fnC = (item,index) => `${item} ${index+1}`;
-
-function addIndex(item, index){
-   return `${item} ${index+1}`
+function overFifteen(iParam) {
+    return  iParam > 15 ? true : false; 
 }
 
-const newDays = days.map( addIndex );
 
-console.log(newDays);
+const biggerThan15 = numbers.filter( overFifteen );
+
+// console.log(biggerThan15);
+
+
+let posts = ['Hi', 'Hello', 'Bye'];
+
+posts = posts.filter( (item, index) => index > 0 );
+console.log(posts);
