@@ -1,42 +1,21 @@
+const days = ['Mon', 'Tue', 'Wed' ];
+const otherDays = ['Thu', 'Fri','Sat'];
 
-//button click listener - vanila js
-const button = document.querySelector('.btn1');
+//spread 연산자를 이용하면 배열 분해 가능
+const allDays =[ ...days ,...otherDays];
 
-button.addEventListener("click", (event) => console.log(event));
+console.log(allDays);
 
-//default value = Human
-const sayHello = (name = "Human") => `Hello ${name}`;
-const nicolas = sayHello('Nicolas');
-console.log(nicolas);
+const ob = {
 
-//1.3 Object
-const human = {
-    name:"Nike",
-    lastName:"Boko",
-    nationality:"Korean",
-
-    favFood:{
-
-        breakfast:"Burger",
-        lunch:"Kimchi",
-        dinner:"Steak"
-
-    }
-
+    first:'Hi',
+    second:'Hello'
 }
 
+const ab = {
+    third:'bye'
+}
 
-//아래 두 코드는 동일하다!
-
-// const name = human.name;
-// const lastName = human.lastName;
-// const difName = human.nationality;
-
-const {
-    name, 
-    lastName, 
-    nationality:difName, 
-    favFood:{dinner,lunch,breakfast} 
-} = human;
-
-console.log(name,lastName, difName, dinner, lunch, breakfast);
+//spread 연산자를 통한 객체 아이템 접근
+const two = {...ob,...ab};
+console.log(two);
