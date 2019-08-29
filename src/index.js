@@ -1,31 +1,12 @@
 
-//기본적인 클래스 생성 및 상속하기
-class Human {
+const days = ['mon', 'tue', 'wed', 'thurs', 'fri'];
 
+const fnC = (item,index) => `${item} ${index+1}`;
 
-    constructor(name, lastName){
-        this.name = name;
-        this.lastName = lastName;
-    }
-
+function addIndex(item, index){
+   return `${item} ${index+1}`
 }
 
-class Baby extends Human{
+const newDays = days.map( addIndex );
 
-    cry(){
-        console.log('wassssss');
-    }
-
-    sayName(){
-        console.log(`I'm ${this.name} ${this.lastName}`);
-
-    }
-
-}
-
-const nico = new Human('Nucj', "thos");
-
-const myBaby = new Baby('jus', 'das');
-
-// console.log(nico);
-console.log(myBaby.cry(), myBaby.sayName() );
+console.log(newDays);
